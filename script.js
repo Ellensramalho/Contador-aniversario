@@ -1,6 +1,6 @@
 import Countdown from "./countdown.js"; 
 
-const diasParaOMeuAniversario = new Countdown('24 March 2026 23:59:59 GMT-0300');
+const diasParaOMeuAniversario = new Countdown('24 March 2026 GMT-0300');
 
 const daysEl = document.getElementById("days");
 const hoursEl = document.getElementById("hours");
