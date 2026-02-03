@@ -35,6 +35,3 @@ O contador exibe **dias, horas, minutos e segundos** em tempo real, com um visua
 ```js
 const diasParaOMeuAniversario = new Countdown('24 March 2026 23:59:59 GMT-0300');
 ````
-
-- Deixar com cara de projeto de portfólio 💼😄
-```
