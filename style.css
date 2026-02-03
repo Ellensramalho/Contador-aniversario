@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  text-align: center;
+  padding: 40px 50px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 20px 40px rgba(255, 105, 180, 0.25);
+}
+
+.container h1 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ff5fa2, #b86bff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.countdown {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.time-box {
+  min-width: 100px;
+  padding: 18px 22px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.time-box:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 12px 30px rgba(186, 104, 255, 0.35);
+}
+
+.time-box span {
+  display: block;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #7a1fa2;
+  text-shadow: 0 0 12px rgba(255, 182, 193, 0.8);
+}
+
+.time-box small {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #6a1b9a;
+  opacity: 0.8;
+}
+
+body::before,
+body::after {
+  content: "🎉";
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.4;
+  animation: floatSparkle 10s linear infinite;
+}
+
+body::after {
+  content: "🎂";
+  animation-duration: 14s;
+}
+
+@keyframes floatSparkle {
+  from {
+    transform: translateY(100vh) translateX(0);
+  }
+  to {
+    transform: translateY(-10vh) translateX(50px);
+  }
+}
+
+
+@media (max-width: 480px) {
+  .container {
+    padding: 25px 20px;
+  }
+
+  .container h1 {
+    font-size: 1.6rem;
+  }
+
+  .time-box span {
+    font-size: 2.1rem;
+  }
+}
